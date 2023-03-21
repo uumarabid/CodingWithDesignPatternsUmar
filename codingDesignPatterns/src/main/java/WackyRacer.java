@@ -60,6 +60,6 @@ public class WackyRacer {
                 "\nNumber of Contestants: " + this.numberOfContestants + 
                 "\nHeight: " + this.height + 
                 "\nSpeed: " + this.speed+
-                "\nDistance: " + this.distance);
+                "\nDistance: " + this.distance+"\n=======\n");
     }
 }
