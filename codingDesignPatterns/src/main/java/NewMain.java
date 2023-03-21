@@ -15,6 +15,11 @@ public class NewMain {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hello");
+        
+        WackyRacer gruesomeTwosome = new WackyRacer ("The Gruesome Twosome", 
+                "The creepy Coupe", 2, 2,6.2);
+        
+        System.out.println(gruesomeTwosome.getCarName());
     }
     
 }
