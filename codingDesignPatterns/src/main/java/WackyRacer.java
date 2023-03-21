@@ -54,4 +54,12 @@ public class WackyRacer {
         return distance;
     }
       
+    public String toString(){
+        return ("Name: " + this.contestantName + "\nCar Name: " + this.carName + 
+                "\nCar Number: " + this.carNumber +
+                "\nNumber of Contestants: " + this.numberOfContestants + 
+                "\nHeight: " + this.height + 
+                "\nSpeed: " + this.speed+
+                "\nDistance: " + this.distance);
+    }
 }
