@@ -22,8 +22,36 @@ public class WackyRacer {
         this.carNumber = carNumber;
         this.numberOfContestants = numberOfContestants;
         this.height = height;
+        this.speed = speed;
+        this.distance = 0;
     }
-    
-    
-    
+
+    public String getContestantName() {
+        return contestantName;
+    }
+
+    public String getCarName() {
+        return carName;
+    }
+
+    public int getCarNumber() {
+        return carNumber;
+    }
+
+    public int getNumberOfContestants() {
+        return numberOfContestants;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+      
 }
