@@ -16,8 +16,13 @@ public class WackyRacer {
     int speed;
     int distance;
 
-   
-    
+    public WackyRacer(String contestantName, String carName, int carNumber, int numberOfContestants, double height) {
+        this.contestantName = contestantName;
+        this.carName = carName;
+        this.carNumber = carNumber;
+        this.numberOfContestants = numberOfContestants;
+        this.height = height;
+    }
     
     
     
