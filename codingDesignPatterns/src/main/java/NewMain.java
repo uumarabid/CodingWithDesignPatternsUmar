@@ -35,6 +35,7 @@ public class NewMain {
         
         System.out.println(gruesomeTwosome); 
         System.out.println(authorUmar);
+        authorUmar.specialPower();
 
     }
     

@@ -62,13 +62,19 @@ public class WackyRacer {
         int miles = new Random().nextInt(speed);
         return distance+=miles;
     }
-      
+    
+    public void specialPower(){
+         System.out.println(this.contestantName + " has a special power");
+    }
+    
+          
     public String toString(){
         return ("Name: " + this.contestantName + "\nCar Name: " + this.carName + 
                 "\nCar Number: " + this.carNumber +
                 "\nNumber of Contestants: " + this.numberOfContestants + 
                 "\nHeight: " + this.height + 
                 "\nSpeed: " + this.speed+
-                "\nDistance: " + move()+" miles\n=======\n");
+                "\nDistance: " + move()+" miles"+
+                "\n=======\n");
     }
 }
