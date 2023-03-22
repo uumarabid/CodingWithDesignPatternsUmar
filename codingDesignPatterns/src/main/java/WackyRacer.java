@@ -57,6 +57,11 @@ public class WackyRacer {
     public int getDistance() {
         return distance;
     }
+    
+    public int move(){
+        int miles = new Random().nextInt(speed);
+        return distance+=miles;
+    }
       
     public String toString(){
         return ("Name: " + this.contestantName + "\nCar Name: " + this.carName + 
@@ -64,6 +69,6 @@ public class WackyRacer {
                 "\nNumber of Contestants: " + this.numberOfContestants + 
                 "\nHeight: " + this.height + 
                 "\nSpeed: " + this.speed+
-                "\nDistance: " + this.distance+"\n=======\n");
+                "\nDistance: " + move()+" miles\n=======\n");
     }
 }
