@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -22,7 +25,8 @@ public class WackyRacer {
         this.carNumber = carNumber;
         this.numberOfContestants = numberOfContestants;
         this.height = height;
-        this.speed = speed;
+        // https://www.geeksforgeeks.org/java-util-random-nextint-java/
+        this.speed = new Random().nextInt(10);
         this.distance = 0;
     }
 
