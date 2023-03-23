@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -22,7 +25,8 @@ public class WackyRacer {
         this.carNumber = carNumber;
         this.numberOfContestants = numberOfContestants;
         this.height = height;
-        this.speed = speed;
+        // https://www.geeksforgeeks.org/java-util-random-nextint-java/
+        this.speed = new Random().nextInt(10);
         this.distance = 0;
     }
 
@@ -53,13 +57,24 @@ public class WackyRacer {
     public int getDistance() {
         return distance;
     }
-      
+    
+    public int move(){
+        int miles = new Random().nextInt(speed);
+        return distance+=miles;
+    }
+    
+    public void specialPower(){
+         System.out.println(this.contestantName + " has a special power");
+    }
+    
+          
     public String toString(){
         return ("Name: " + this.contestantName + "\nCar Name: " + this.carName + 
                 "\nCar Number: " + this.carNumber +
                 "\nNumber of Contestants: " + this.numberOfContestants + 
                 "\nHeight: " + this.height + 
                 "\nSpeed: " + this.speed+
-                "\nDistance: " + this.distance);
+                "\nDistance: " + move()+" miles"+
+                "\n=======\n");
     }
 }
