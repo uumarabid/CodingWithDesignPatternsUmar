@@ -7,14 +7,14 @@
  *
  * @author star_
  */
-public class CreepyCoupe implements Car {
+public class CrimsonHaybailer implements Car {
 
     public String getCarName() {
-        return "The Creepy Coupe";
+        return "The Crimson Haybailer";
     }
 
     public int getSpeed() {
-        return 9;
+        return 5;
         //return (int) (Math.random() * 10);
     }
 
