@@ -12,6 +12,7 @@ import java.util.Random;
  */
 public class WackyRacer {
     String contestantName;
+    Car car;
     String carName;
     int carNumber;
     int numberOfContestants;
@@ -21,12 +22,14 @@ public class WackyRacer {
 
     public WackyRacer(String contestantName, String carName, int carNumber, int numberOfContestants, double height) {
         this.contestantName = contestantName;
+        this.car = CarFactory.createCar(carName);
         this.carName = carName;
         this.carNumber = carNumber;
         this.numberOfContestants = numberOfContestants;
         this.height = height;
         // https://www.geeksforgeeks.org/java-util-random-nextint-java/
-        this.speed = new Random().nextInt(10);
+        //this.speed = new Random().nextInt(10);
+        this.speed = (int)(Math.random()*11);
         this.distance = 0;
     }
 
@@ -53,15 +56,24 @@ public class WackyRacer {
     public int getSpeed() {
         return speed;
     }
+    
+    public void setSpeed(int speed){
+        this.speed = speed;
+    }
 
     public int getDistance() {
         return distance;
     }
     
     public int move(){
-        int miles = new Random().nextInt(speed);
-        return distance+=miles;
+        int distance = speed*car.getSpeed();
+        return distance;
     }
+    
+//    public int move(){
+//        int miles = new Random().nextInt(speed);
+//        return distance+=miles;
+//    }
     
     public void specialPower(){
          System.out.println(this.contestantName + " has a special power");
