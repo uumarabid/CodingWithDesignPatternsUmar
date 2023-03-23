@@ -14,8 +14,8 @@ public class CreepyCoupe implements Car {
     }
 
     public int getSpeed() {
-        return 9;
-        //return (int) (Math.random() * 10);
+//        return 9;
+        return (int) (Math.random() * 10);
     }
 
 }
