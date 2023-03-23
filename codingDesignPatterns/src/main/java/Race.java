@@ -43,7 +43,11 @@ public class Race {
                 }
             }
             
-            // notify observer current state of the race
+            // notify observer of the winner
+            
+            for (RaceObserver observer : observers){
+                observer.update(winner);
+            }
         }
     
     
