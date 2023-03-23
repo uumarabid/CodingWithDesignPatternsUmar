@@ -11,7 +11,9 @@
 // https://www.geeksforgeeks.org/factory-method-design-pattern-in-java/
 public class CarFactory {
 
-    public Car createCar(String carName) {
+    // https://blog.hubspot.com/website/static-method-java#:~:text=What%20is%20a%20Static%20Method,are%20sometimes%20called%20class%20methods.
+    
+    public static Car createCar(String carName) {
         switch (carName) {
             case "MeanMachine":
                 return new MeanMachine();
