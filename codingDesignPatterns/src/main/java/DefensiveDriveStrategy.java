@@ -7,10 +7,10 @@
  *
  * @author star_
  */
-public class AggressiveDriveStrategy implements DriveStrategy {
-
+public class DefensiveDriveStrategy implements DriveStrategy {
+    
     public void drive() {
-        System.out.println("Driving aggressively to overtake other cars.");
+        System.out.println("Driving cautiously and conservatively to avoid collisions with other cars.");
     }
-
+    
 }
