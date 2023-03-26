@@ -21,6 +21,5 @@ public class Car {
     public void move(){
         driveStrategy.drive();
     }
-    
-    
+      
 }
