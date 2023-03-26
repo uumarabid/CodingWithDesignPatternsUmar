@@ -65,10 +65,17 @@ public class WackyRacer {
         return distance;
     }
     
+<<<<<<< HEAD
 //    public int move(){
 //        int distance = speed*car.getSpeed();
 //        return distance;
 //    }
+=======
+    public int move(int distance){
+        distance = speed*car.getSpeed();
+        return distance;
+    }
+>>>>>>> 0ae35eaf8e59a24610aaa533a2831765b045c447
     
 //    public int move(){
 //        int miles = new Random().nextInt(speed);
@@ -86,7 +93,11 @@ public class WackyRacer {
                 "\nNumber of Contestants: " + this.numberOfContestants + 
                 "\nHeight: " + this.height + 
                 "\nSpeed: " + this.speed+
+<<<<<<< HEAD
                 "\nDistance: " +" miles"+
+=======
+                "\nDistance: " + distance +" miles"+
+>>>>>>> 0ae35eaf8e59a24610aaa533a2831765b045c447
                 "\n=======\n");
     }
 }
