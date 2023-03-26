@@ -7,8 +7,7 @@
  *
  * @author star_
  */
-public interface Car {
-    String getCarName();
-    int getSpeed();
+public interface DriveStrategy {
+    public void drive();
     
 }
