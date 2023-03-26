@@ -15,8 +15,7 @@ public class NewMain {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("\n-------Hello and welcome to Wacky car racer-----------\n");
-        
-        //CarFactory carFactory = new CarFactory();
+      
         
         
 //        WackyRacer dastardlyMuttley = new WackyRacer ("Dick Dastardly and Muttley", 
@@ -24,7 +23,7 @@ public class NewMain {
 //        WackyRacer gruesomeTwosome = new WackyRacer ("The Gruesome Twosome", 
 //                "The creepy Coupe", 2, 2,6.2);
 //        WackyRacer professorPat = new WackyRacer ("Professor Pat Pending", 
-//                "The Convert-A-Car", 3, 1,5.4);
+//                "The Convert-A-DriveStrategy", 3, 1,5.4);
 //        WackyRacer redMax = new WackyRacer ("The Red Max", 
 //                "The Crimson Haybailer", 4, 1,5.5);
 //        WackyRacer penelopePitstop = new WackyRacer ("Penelope Pitstop", 
