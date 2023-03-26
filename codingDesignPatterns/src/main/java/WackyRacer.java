@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public class WackyRacer {
     String contestantName;
-    Car car;
+    DriveStrategy car;
     String carName;
     int carNumber;
     int numberOfContestants;
@@ -22,7 +22,7 @@ public class WackyRacer {
 
     public WackyRacer(String contestantName, String carName, int carNumber, int numberOfContestants, double height) {
         this.contestantName = contestantName;
-        this.car = CarFactory.createCar(carName);
+        
         this.carName = carName;
         this.carNumber = carNumber;
         this.numberOfContestants = numberOfContestants;
@@ -65,10 +65,10 @@ public class WackyRacer {
         return distance;
     }
     
-    public int move(){
-        int distance = speed*car.getSpeed();
-        return distance;
-    }
+//    public int move(){
+//        int distance = speed*car.getSpeed();
+//        return distance;
+//    }
     
 //    public int move(){
 //        int miles = new Random().nextInt(speed);
@@ -86,7 +86,7 @@ public class WackyRacer {
                 "\nNumber of Contestants: " + this.numberOfContestants + 
                 "\nHeight: " + this.height + 
                 "\nSpeed: " + this.speed+
-                "\nDistance: " + move()+" miles"+
+                "\nDistance: " +" miles"+
                 "\n=======\n");
     }
 }

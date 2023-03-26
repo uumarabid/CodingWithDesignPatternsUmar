@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public class Ferrari250GTO implements Car {
+public class Ferrari250GTO {
 
     public String getCarName() {
         return "The Ferrari 250 GTO";
