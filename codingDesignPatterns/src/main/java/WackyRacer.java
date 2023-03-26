@@ -65,8 +65,8 @@ public class WackyRacer {
         return distance;
     }
     
-    public int move(){
-        int distance = speed*car.getSpeed();
+    public int move(int distance){
+        distance = speed*car.getSpeed();
         return distance;
     }
     
@@ -86,7 +86,7 @@ public class WackyRacer {
                 "\nNumber of Contestants: " + this.numberOfContestants + 
                 "\nHeight: " + this.height + 
                 "\nSpeed: " + this.speed+
-                "\nDistance: " + move()+" miles"+
+                "\nDistance: " + distance +" miles"+
                 "\n=======\n");
     }
 }

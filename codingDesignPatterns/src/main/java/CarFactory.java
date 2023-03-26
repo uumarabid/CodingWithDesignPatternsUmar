@@ -9,6 +9,7 @@
  */
 // Factory method design pattern to create cars
 // https://www.geeksforgeeks.org/factory-method-design-pattern-in-java/
+// https://en.wikipedia.org/wiki/Factory_method_pattern
 public class CarFactory {
 
     // https://blog.hubspot.com/website/static-method-java#:~:text=What%20is%20a%20Static%20Method,are%20sometimes%20called%20class%20methods.
