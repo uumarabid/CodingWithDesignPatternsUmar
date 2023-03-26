@@ -9,4 +9,14 @@
  */
 public class Track {
     
+    LayoutStrategy layoutStrategy;
+
+    public Track(LayoutStrategy layoutStrategy) {
+        this.layoutStrategy = layoutStrategy;
+    }
+    
+    //  building track to a LayoutStrategy object
+    public void build(){
+        layoutStrategy.build();
+    }
 }
