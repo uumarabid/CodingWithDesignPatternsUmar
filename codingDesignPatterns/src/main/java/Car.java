@@ -13,7 +13,14 @@ public class Car {
     public Car(DriveStrategy driveStrategy) {
         this.driveStrategy = driveStrategy;
     }
+
+    public void setDriveStrategy(DriveStrategy driveStrategy) {
+        this.driveStrategy = driveStrategy;
+    }
     
+    public void move(){
+        driveStrategy.drive();
+    }
     
     
 }
