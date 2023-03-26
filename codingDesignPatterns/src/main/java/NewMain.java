@@ -17,9 +17,6 @@ public class NewMain {
         System.out.println("\n-------Hello and welcome to Wacky car racer-----------\n");
         
         //CarFactory carFactory = new CarFactory();
-        Car car = CarFactory.createCar("CreepyCoupe");
-        System.out.println(car.getCarName());
-        System.out.println(car.getSpeed());
         
         
 //        WackyRacer dastardlyMuttley = new WackyRacer ("Dick Dastardly and Muttley", 

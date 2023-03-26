@@ -33,7 +33,7 @@ public class Race {
             // move each racer forward by random number
             for(WackyRacer racer : racers){
                 int distance = (int) (Math.random()*racer.getSpeed());
-                racer.move(distance);
+//                racer.move(distance);
                 
                 // check if the racer has reached the finish line
                 
