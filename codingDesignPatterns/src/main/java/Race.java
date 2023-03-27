@@ -10,17 +10,31 @@ import java.util.List;
  *
  * @author star_
  */
-public class Race {
+public class Race implements RaceObserver{
 
     private int laps;
     private List<Car> cars;
     private List<RaceObserver> observers = new ArrayList<>();
+    private int lapCount = 0;
+
+    public int getLapCount() {
+        return lapCount;
+    }
+
+    public void setLapCount(int lapCount) {
+        this.lapCount = lapCount;
+    }
 
     public Race(int laps) {
         this.laps = laps;
         this.cars = new ArrayList<>();
 
     }
+
+    public int getLaps() {
+        return laps;
+    }
+    
 
     public void addCar(Car car) {
         cars.add(car);
@@ -51,4 +65,12 @@ public class Race {
              observer.update(this);
          }
      }
+     
+      public void update(Race race){
+        int currentLap = race.getLapCount();
+        if(currentLap > lapCount){
+            lapCount = currentLap;
+            System.out.println("New lap completed " + lapCount);
+        }
+    }
 }
