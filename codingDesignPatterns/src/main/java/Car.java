@@ -5,17 +5,15 @@ import java.util.Random;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 /**
  *
  * @author star_
  */
 public class Car {
+
     DriveStrategy driveStrategy;
     int speed;
     int distance;
-
-   
 
     public Car(DriveStrategy driveStrategy) {
         this.driveStrategy = driveStrategy;
@@ -27,26 +25,26 @@ public class Car {
     public void setDriveStrategy(DriveStrategy driveStrategy) {
         this.driveStrategy = driveStrategy;
     }
-    
-    public void move(){
+
+    public void move() {
         driveStrategy.drive();
     }
-    
-      public int getSpeed() {
+
+    public int getSpeed() {
         return speed;
     }
-    
-    public void setSpeed(int speed){
+
+    public void setSpeed(int speed) {
         this.speed = speed;
     }
-    
-     public int getDistanece() {
+
+    public int getDistanece() {
         return distance;
     }
-     
-    public void moving(){
+
+    public void moving() {
         int miles = new Random().nextInt(speed);
         distance += miles;
     }
-      
+
 }

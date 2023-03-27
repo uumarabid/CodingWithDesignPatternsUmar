@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author star_
  */
-public class Race implements RaceObserver{
+public class Race implements RaceObserver {
 
     private int laps;
     private List<Car> cars;
@@ -34,7 +34,6 @@ public class Race implements RaceObserver{
     public int getLaps() {
         return laps;
     }
-    
 
     public void addCar(Car car) {
         cars.add(car);
@@ -50,31 +49,31 @@ public class Race implements RaceObserver{
 
     public boolean isOver() {
         // check if the race is over 
-        for (Car car : cars){
-            if(car.getDistanece()>= lapCount){
+        for (Car car : cars) {
+            if (car.getDistanece() >= lapCount) {
                 return true;
             }
         }
         return false;
     }
-    
-     public void addObserver(RaceObserver observer){
-         observers.add(observer);
-     }
-     
-     public void removeobserver(RaceObserver observer){
-         observers.remove(observer);
-     }
-     
-     public void notifyObservers(){
-         for(RaceObserver observer : observers){
-             observer.update(this);
-         }
-     }
-     
-      public void update(Race race){
+
+    public void addObserver(RaceObserver observer) {
+        observers.add(observer);
+    }
+
+    public void removeobserver(RaceObserver observer) {
+        observers.remove(observer);
+    }
+
+    public void notifyObservers() {
+        for (RaceObserver observer : observers) {
+            observer.update(this);
+        }
+    }
+
+    public void update(Race race) {
         int currentLap = race.getLapCount();
-        if(currentLap > lapCount){
+        if (currentLap > lapCount) {
             lapCount = currentLap;
             System.out.println("New lap completed " + lapCount);
         }
