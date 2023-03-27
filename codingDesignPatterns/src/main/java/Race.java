@@ -37,5 +37,18 @@ public class Race {
     public boolean isOver() {
         return false;
     }
-
+    
+     public void addObserver(RaceObserver observer){
+         observers.add(observer);
+     }
+     
+     public void removeobserver(RaceObserver observer){
+         observers.remove(observer);
+     }
+     
+     public void notifyObservers(){
+         for(RaceObserver observer : observers){
+             observer.update(this);
+         }
+     }
 }
