@@ -49,6 +49,12 @@ public class Race implements RaceObserver{
     }
 
     public boolean isOver() {
+        // check if the race is over 
+        for (Car car : cars){
+            if(car.getDistanece()>= lapCount){
+                return true;
+            }
+        }
         return false;
     }
     
