@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public class PrecisionDriveStrategy implements DriveStrategy{
+public class PrecisionDriveStrategy implements DriveStrategy {
 
     public void drive() {
         System.out.println("Precise control of car's steering, accelerator and braking.");
