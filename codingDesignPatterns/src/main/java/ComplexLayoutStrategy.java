@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public class ComplexLayoutStrategy {
+public class ComplexLayoutStrategy implements LayoutStrategy {
 
     public void build() {
         System.out.println("Building a complex track layout.");

@@ -15,9 +15,28 @@ public class NewMain {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("\n-------Hello and welcome to Wacky car racer-----------\n");
-      
-        
-        
+
+        // Create cars and tracks using the Strategy pattern
+        Car car1 = new Car(new AggressiveDriveStrategy());
+        Car car2 = new Car(new DefensiveDriveStrategy());
+
+        Track track1 = new Track(new SimpleLayoutStrategy());
+        Track track2 = new Track(new ComplexLayoutStrategy());
+
+        track1.build();
+        System.out.println("===<<>>>===");
+
+        // Create race observers using the Observer pattern
+        Race race = new Race(3);
+        race.addCar(car1);
+        race.addCar(car2);
+//        race.setTracks(track1);
+
+        race.startRace();
+
+        race.endRace();
+
+        System.out.println("win the race");
 //        WackyRacer dastardlyMuttley = new WackyRacer ("Dick Dastardly and Muttley", 
 //                "MeanMachine", 00, 2,5.3);
 //        WackyRacer gruesomeTwosome = new WackyRacer ("The Gruesome Twosome", 
@@ -38,7 +57,6 @@ public class NewMain {
 //        System.out.println(gruesomeTwosome); 
 //        System.out.println(authorUmar);
 //        authorUmar.specialPower();
-
     }
-    
+
 }

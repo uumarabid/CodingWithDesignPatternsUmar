@@ -14,8 +14,16 @@ public class Race implements RaceObserver {
 
     private int laps;
     private List<Car> cars;
+    private List<Track> tracks;
+
     private List<RaceObserver> observers = new ArrayList<>();
     private int lapCount = 0;
+
+    public Race(int laps) {
+        this.laps = laps;
+        this.cars = new ArrayList<>();
+
+    }
 
     public int getLapCount() {
         return lapCount;
@@ -23,12 +31,6 @@ public class Race implements RaceObserver {
 
     public void setLapCount(int lapCount) {
         this.lapCount = lapCount;
-    }
-
-    public Race(int laps) {
-        this.laps = laps;
-        this.cars = new ArrayList<>();
-
     }
 
     public int getLaps() {
