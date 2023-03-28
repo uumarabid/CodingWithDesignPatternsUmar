@@ -41,14 +41,29 @@ public class Race implements RaceObserver {
         cars.add(car);
     }
 
-    public void startRace() {
+    public void raceStarted() {
         System.out.println("Race started");
     }
 
-    public void endRace() {
+    public void raceFinished() {
+        System.out.println("Race finished");
+    }
+
+    public void raceEnding() {
+        System.out.println("Race ending");
+    }
+
+    public void raceEnded() {
         System.out.println("Race ended");
     }
 
+//    public void startRace() {
+//        System.out.println("Race started");
+//    }
+//
+//    public void endRace() {
+//        System.out.println("Race ended");
+//    }
     public boolean isOver() {
         // check if the race is over 
         for (Car car : cars) {
@@ -79,5 +94,69 @@ public class Race implements RaceObserver {
             lapCount = currentLap;
             System.out.println("New lap completed " + lapCount);
         }
+    }
+
+    public void start() {
+        // Notify the observers that the race is starting
+        for (RaceObserver observer : observers) {
+            observer.raceStarted();
+        }
+
+        // Perform the race logic here
+        for (int i = 0; i < laps; i++) {
+            for (Car car : cars) {
+                car.moving();
+            }
+        }
+
+        // Notify the observers that the race is finished
+        for (RaceObserver observer : observers) {
+            observer.raceFinished();
+        }
+    }
+
+    public void end() {
+        // Notify the observers that the race is ending
+        for (RaceObserver observer : observers) {
+            observer.raceEnding();
+        }
+
+        // Determine the winner of the race
+        Car winner = null;
+        float maxDistance = 0;
+        for (Car car : cars) {
+            float distance = car.moving();
+            if (distance > maxDistance) {
+                maxDistance = distance;
+                winner = car;
+            }
+        }
+
+        // Notify the observers of the winner of the race
+        for (RaceObserver observer : observers) {
+            observer.raceWinner(winner);
+        }
+
+        // Notify the observers that the race has ended
+        for (RaceObserver observer : observers) {
+            observer.raceEnded();
+        }
+    }
+    // double check this
+    public Car getWinner() {
+        int maxLaps = -1;
+        Car winner = null;
+        for (Car car : cars) {
+            int laps = car.getLapsCompleted();
+            if (laps > maxLaps) {
+                maxLaps = laps;
+                winner = car;
+            }
+        }
+        return winner;
+    }
+    // sort this 
+    public void raceWinner(Car Winner) {
+        System.out.println();
     }
 }

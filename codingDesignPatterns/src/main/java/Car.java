@@ -14,16 +14,32 @@ public class Car {
     DriveStrategy driveStrategy;
     int speed;
     int distance;
+//    String winner = null;
+    String name;
+    private int lapsCompleted;
 
     public Car(DriveStrategy driveStrategy) {
         this.driveStrategy = driveStrategy;
         this.speed = new Random().nextInt(10);
         this.distance = 0;
+        this.lapsCompleted = 0;
 
     }
 
     public void setDriveStrategy(DriveStrategy driveStrategy) {
         this.driveStrategy = driveStrategy;
+    }
+
+    public String getName() {
+        return name;
+    }
+    
+      public void completeLap() {
+        lapsCompleted++;
+    }
+
+    public int getLapsCompleted() {
+        return lapsCompleted;
     }
 
     public void move() {

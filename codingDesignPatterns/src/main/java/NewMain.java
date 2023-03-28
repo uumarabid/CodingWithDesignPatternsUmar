@@ -32,41 +32,25 @@ public class NewMain {
         race.addCar(car2);
 //        race.setTracks(track1);
 
-        race.startRace();
-        
-        car1.getDescription(); 
+//        race.startRace();
+        race.raceStarted();
+
+        car1.getDescription();
         car2.getDescription();
 
-        
-        while(!race.isOver()){
+        while (!race.isOver()) {
             race.update(race);
         }
 
-        race.endRace();
-        
-      
+        race.raceEnding();
+        race.raceEnded();
+//        race.endRace();
 
-        System.out.println("win the race");
-//        WackyRacer dastardlyMuttley = new WackyRacer ("Dick Dastardly and Muttley", 
-//                "MeanMachine", 00, 2,5.3);
-//        WackyRacer gruesomeTwosome = new WackyRacer ("The Gruesome Twosome", 
-//                "The creepy Coupe", 2, 2,6.2);
-//        WackyRacer professorPat = new WackyRacer ("Professor Pat Pending", 
-//                "The Convert-A-DriveStrategy", 3, 1,5.4);
-//        WackyRacer redMax = new WackyRacer ("The Red Max", 
-//                "The Crimson Haybailer", 4, 1,5.5);
-//        WackyRacer penelopePitstop = new WackyRacer ("Penelope Pitstop", 
-//                "The Compact Pussycat", 5, 1,5.6);
-//        WackyRacer sergeantPrivate = new WackyRacer ("Sergeant Blast and Private Meekly", 
-//                "The Army Surplus Special", 6, 2,5.7);
-//        WackyRacer bulletproofBomb = new WackyRacer ("The Ant Hill Mob", 
-//                "The Bulletproof Bomb", 7, 7 ,5.8);
-//        WackyRacer authorUmar = new WackyRacer ("Umar", 
-//                "Ferrari 250 GTO", 1, 2,5.6);
-//        
-//        System.out.println(gruesomeTwosome); 
-//        System.out.println(authorUmar);
-//        authorUmar.specialPower();
+        Car winner = race.getWinner();
+        System.out.println("The winner is " + winner.getName() + "!");
+
+//        System.out.println("win the race");
+
     }
 
 }
