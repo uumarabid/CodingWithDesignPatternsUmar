@@ -33,8 +33,14 @@ public class NewMain {
 //        race.setTracks(track1);
 
         race.startRace();
+        
+        while(!race.isOver()){
+            race.update(race);
+        }
 
         race.endRace();
+        
+      
 
         System.out.println("win the race");
 //        WackyRacer dastardlyMuttley = new WackyRacer ("Dick Dastardly and Muttley", 
