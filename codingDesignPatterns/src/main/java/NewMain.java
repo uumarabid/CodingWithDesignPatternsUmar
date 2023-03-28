@@ -34,6 +34,10 @@ public class NewMain {
 
         race.startRace();
         
+        car1.getDescription(); 
+        car2.getDescription();
+
+        
         while(!race.isOver()){
             race.update(race);
         }

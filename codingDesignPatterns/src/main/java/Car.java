@@ -42,9 +42,16 @@ public class Car {
         return distance;
     }
 
-    public void moving() {
+    public int moving() {
         int miles = new Random().nextInt(speed);
-        distance += miles;
+        return distance += miles;
     }
 
+    public String getDescription() {
+        System.out.println(
+                "\nSpeed: " + speed 
+                + "\nDistance: " + moving() + " miles"
+                + "\n=======\n");
+        return null;
+    }
 }
