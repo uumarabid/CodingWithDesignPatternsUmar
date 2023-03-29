@@ -1,4 +1,5 @@
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
 public class Race implements RaceObserver {
 
     private int laps;
+   // private LocalTime finishingTime;
     private List<Car> cars;
     private Track tracks;
 
@@ -50,11 +52,11 @@ public class Race implements RaceObserver {
     }
 
     public void raceEnding() {
-        System.out.println("Race ending");
+        System.out.println("Race ending...\n");
     }
 
     public void raceEnded() {
-        System.out.println("Race ended");
+        System.out.println("Race ended !!!.\n");
     }
 
 //    public void startRace() {
@@ -67,7 +69,8 @@ public class Race implements RaceObserver {
     public boolean isOver() {
         // check if the race is over 
         for (Car car : cars) {
-            if (car.getDistanece() >= lapCount) {
+            if (car.getDistance() >= lapCount) {
+                car.setFinishTime(LocalTime.now());
                 return true;
             }
         }
@@ -105,7 +108,7 @@ public class Race implements RaceObserver {
         // Perform the race logic here
         for (int i = 0; i < laps; i++) {
             for (Car car : cars) {
-                car.moving();
+                car.getDistance();
             }
         }
 
@@ -125,7 +128,8 @@ public class Race implements RaceObserver {
         Car winner = null;
         float maxDistance = 0;
         for (Car car : cars) {
-            float distance = car.moving();
+            float distance = car.getDistance();
+            System.out.println(distance + ">>>>>>" + car.name);
             if (distance > maxDistance) {
                 maxDistance = distance;
                 winner = car;
@@ -147,7 +151,7 @@ public class Race implements RaceObserver {
         int maxLaps = -1;
         Car winner = null;
         for (Car car : cars) {
-            int laps = car.getLapsCompleted();
+            int laps = car.getDistance();
             if (laps > maxLaps) {
                 maxLaps = laps;
                 winner = car;
@@ -157,10 +161,14 @@ public class Race implements RaceObserver {
     }
     // sort this 
     public void raceWinner(Car Winner) {
-        System.out.println();
+        System.out.println("Winning");
     }
 
     void setTracks(Track tracks) {
        this.tracks= new Track(tracks);
    }
+    
+    public void getTrackDescription() {
+         this.tracks.build();
+    }
 }

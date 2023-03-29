@@ -30,10 +30,12 @@ public class NewMain {
         Race race = new Race(3);
         race.addCar(car1);
         race.addCar(car2);
-        race.setTracks(track1);
+        race.setTracks(track2);
 
 //        race.startRace();
         race.raceStarted();
+        
+        race.getTrackDescription();
 
         car1.getDescription();
         car2.getDescription();

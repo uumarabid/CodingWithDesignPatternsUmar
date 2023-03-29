@@ -1,4 +1,6 @@
 
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.Random;
 
 /*
@@ -14,16 +16,21 @@ public class Car {
     IDriveStrategy driveStrategy;
     int speed;
     int distance;
+    LocalTime startTime;    
+    LocalTime finishTime;
+
+            
 //    String winner = null;
     String name;
-    private int lapsCompleted;
+//    private int lapsCompleted;
 
     public Car(IDriveStrategy driveStrategy, String name) {
         this.driveStrategy = driveStrategy;
-        this.speed = new Random().nextInt(10);
+        this.speed = new Random().nextInt(20);
         this.distance = 0;
-        this.lapsCompleted = 0;
+//        this.lapsCompleted = 0;
         this.name = name;
+        this.startTime = LocalTime.now();
     }
 
     public void setDriveStrategy(IDriveStrategy driveStrategy) {
@@ -33,14 +40,14 @@ public class Car {
     public String getName() {
         return name;
     }
-
-    public void completeLap() {
-        lapsCompleted++;
-    }
-
-    public int getLapsCompleted() {
-        return lapsCompleted;
-    }
+//
+//    public void completeLap() {
+//        lapsCompleted++;
+//    }
+//
+//    public int getLapsCompleted() {
+//        return lapsCompleted;
+//    }
 
     public void move() {
         driveStrategy.drive();
@@ -54,20 +61,19 @@ public class Car {
         this.speed = speed;
     }
 
-    public int getDistanece() {
-        return distance;
+    
+    public void setFinishTime(LocalTime time) {
+        this.finishTime = time;
+    }
+    
+    public int getDistance() {
+        return this.speed * Duration.between(startTime, LocalTime.now()).getNano();
     }
 
-    public int moving() {
-        int miles = new Random().nextInt(speed+1);
-        return distance += miles;
-    }
-
-    public String getDescription() {
-        System.out.println(
-                "\nSpeed: " + speed
-                + "\nDistance: " + moving() + " miles"
-                + "\n=======\n");
-        return null;
+    public void getDescription() {
+        System.out.println("\nname: " + this.name 
+                           + "\nSpeed: " + speed
+                           + "\nDistance: " + (getDistance()/1000000) + " miles"
+                            + "\n=======\n");
     }
 }
