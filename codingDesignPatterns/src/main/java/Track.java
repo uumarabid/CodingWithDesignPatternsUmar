@@ -7,16 +7,20 @@
  *
  * @author star_
  */
-public class Track {
-    
+public class Track implements LayoutStrategy {
+
     LayoutStrategy layoutStrategy;
 
     public Track(LayoutStrategy layoutStrategy) {
         this.layoutStrategy = layoutStrategy;
     }
-    
+
+    public void setLayoutStrategy(LayoutStrategy layoutStrategy) {
+        this.layoutStrategy = layoutStrategy;
+    }
+
     //  building track to a LayoutStrategy object
-    public void build(){
+    public void build() {
         layoutStrategy.build();
     }
 }

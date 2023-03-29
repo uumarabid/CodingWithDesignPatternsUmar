@@ -7,7 +7,13 @@
  *
  * @author star_
  */
-public interface DriveStrategy {
-    public void drive();
+public interface RaceObserver {
+    public void update(Race race);
+    public void raceStarted();
+    public void raceFinished();
+    public void raceEnding();
+    public void raceEnded();
+
+    public void raceWinner(Car winner);
     
 }

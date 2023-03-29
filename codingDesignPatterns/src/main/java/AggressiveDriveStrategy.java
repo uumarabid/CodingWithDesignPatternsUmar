@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public class AggressiveDriveStrategy implements DriveStrategy {
+public class AggressiveDriveStrategy implements IDriveStrategy {
 
     public void drive() {
         System.out.println("Driving aggressively to overtake other cars.");

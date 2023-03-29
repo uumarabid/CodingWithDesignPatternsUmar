@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public class DefensiveDriveStrategy implements DriveStrategy {
+public class DefensiveDriveStrategy implements IDriveStrategy {
 
     public void drive() {
         System.out.println("Driving cautiously and conservatively to avoid collisions with other cars.");
