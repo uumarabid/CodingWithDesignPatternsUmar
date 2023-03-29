@@ -11,30 +11,30 @@ import java.util.Random;
  */
 public class Car {
 
-    DriveStrategy driveStrategy;
+    IDriveStrategy driveStrategy;
     int speed;
     int distance;
 //    String winner = null;
     String name;
     private int lapsCompleted;
 
-    public Car(DriveStrategy driveStrategy) {
+    public Car(IDriveStrategy driveStrategy, String name) {
         this.driveStrategy = driveStrategy;
         this.speed = new Random().nextInt(10);
         this.distance = 0;
         this.lapsCompleted = 0;
-
+        this.name = name;
     }
 
-    public void setDriveStrategy(DriveStrategy driveStrategy) {
+    public void setDriveStrategy(IDriveStrategy driveStrategy) {
         this.driveStrategy = driveStrategy;
     }
 
     public String getName() {
         return name;
     }
-    
-      public void completeLap() {
+
+    public void completeLap() {
         lapsCompleted++;
     }
 
@@ -59,13 +59,13 @@ public class Car {
     }
 
     public int moving() {
-        int miles = new Random().nextInt(speed);
+        int miles = new Random().nextInt(speed+1);
         return distance += miles;
     }
 
     public String getDescription() {
         System.out.println(
-                "\nSpeed: " + speed 
+                "\nSpeed: " + speed
                 + "\nDistance: " + moving() + " miles"
                 + "\n=======\n");
         return null;

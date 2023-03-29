@@ -17,8 +17,8 @@ public class NewMain {
         System.out.println("\n-------Hello and welcome to Wacky car racer-----------\n");
 
         // Create cars and tracks using the Strategy pattern
-        Car car1 = new Car(new AggressiveDriveStrategy());
-        Car car2 = new Car(new DefensiveDriveStrategy());
+        Car car1 = new Car(new AggressiveDriveStrategy(),"Umar");
+        Car car2 = new Car(new DefensiveDriveStrategy(),"Butt");
 
         Track track1 = new Track(new SimpleLayoutStrategy());
         Track track2 = new Track(new ComplexLayoutStrategy());
@@ -30,7 +30,7 @@ public class NewMain {
         Race race = new Race(3);
         race.addCar(car1);
         race.addCar(car2);
-//        race.setTracks(track1);
+        race.setTracks(track1);
 
 //        race.startRace();
         race.raceStarted();

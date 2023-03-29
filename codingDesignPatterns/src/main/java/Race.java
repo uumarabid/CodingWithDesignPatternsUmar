@@ -14,7 +14,7 @@ public class Race implements RaceObserver {
 
     private int laps;
     private List<Car> cars;
-    private List<Track> tracks;
+    private Track tracks;
 
     private List<RaceObserver> observers = new ArrayList<>();
     private int lapCount = 0;
@@ -159,4 +159,8 @@ public class Race implements RaceObserver {
     public void raceWinner(Car Winner) {
         System.out.println();
     }
+
+    void setTracks(Track tracks) {
+       this.tracks= new Track(tracks);
+   }
 }

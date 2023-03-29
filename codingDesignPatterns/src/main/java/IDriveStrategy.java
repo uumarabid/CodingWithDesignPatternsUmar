@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public interface DriveStrategy {
+public interface IDriveStrategy {
     public void drive();
     
 }
