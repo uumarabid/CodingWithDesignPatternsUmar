@@ -56,11 +56,9 @@ public class NewMain {
                     continue; // Continue to the next iteration of the loop
             }
 
-            
             System.out.println("Starting race on " + track + "...");
             break; // Exit the loop if a valid selection was made
         } while (true); // Loop indefinitely until a valid selection is made
-
 
         try {
             // Wait for 3 seconds
@@ -71,23 +69,49 @@ public class NewMain {
 
         race.getTrackDescription();
         System.out.println("===<<>>>===");
+        try {
+            // Wait for 3 seconds
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
 //        race.startRace();
         race.raceStarted();
         System.out.println(">>>>>>>>>>>>>");
 
         car1.getDescription();
+        try {
+            // Wait for 3 seconds
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         car2.getDescription();
+
+        try {
+            // Wait for 3 seconds
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         while (!race.isOver()) {
             race.update(race);
         }
 
-        race.update(race);
-
+//        race.update(race);
         race.raceEnding();
         race.raceEnded();
 //        race.endRace();
+        race.end();
+        try {
+            // Wait for 3 seconds
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         Car winner = race.getWinner();
         System.out.println("The winner is " + winner.getName() + "!");

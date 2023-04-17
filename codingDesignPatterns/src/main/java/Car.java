@@ -73,7 +73,7 @@ public class Car {
     public void getDescription() {
         System.out.println("\nname: " + this.name 
                            + "\nSpeed: " + speed
-                           + "\nDistance: " + (getDistance()/1000000) + " miles"
+                           + "\nDistance: " + (getDistance()/10000000) + " miles"
                             + "\n=======\n");
     }
 }
