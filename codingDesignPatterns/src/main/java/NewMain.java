@@ -34,31 +34,41 @@ public class NewMain {
 //        race.setTracks(track1);
 
         Scanner scanner = new Scanner(System.in);
+        int trackSelection;
+        do {
+            System.out.println("Which track do you want to go for?");
+            System.out.println("Press 1 for simple track: ");
+            System.out.println("Press 2 for complex track: ");
+            trackSelection = scanner.nextInt();
 
-        System.out.println("Which track do you want to go for?");
-        System.out.println("Press 1 for simple track:");
-        System.out.println("Press 2 for complex track: ");
-        int trackSelection = scanner.nextInt();
+            String track;
+            switch (trackSelection) {
+                case 1:
+                    race.setTracks(track1);
+                    track = "Simple Track";
+                    break;
+                case 2:
+                    race.setTracks(track2);
+                    track = "Complex Track";
+                    break;
+                default:
+                    System.out.println("\n--Invalid selection. Please try again--\n");
+                    continue; // Continue to the next iteration of the loop
+            }
 
-        String track;
-        switch (trackSelection) {
-            case 1:
-                race.setTracks(track1);
-                track = "Simple Track";
-                break;
-            case 2:
-                race.setTracks(track2);
-                track = "Complex Track";
-                break;
-            default:
-                System.out.println("Invalid selection");
-                return;
+            
+            System.out.println("Starting race on " + track + "...");
+            break; // Exit the loop if a valid selection was made
+        } while (true); // Loop indefinitely until a valid selection is made
+
+
+        try {
+            // Wait for 3 seconds
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
-        // Use the track variable to perform some action, such as starting the race on the selected track
-        System.out.println("Starting race on " + track + "...\n");
-
-     
         race.getTrackDescription();
         System.out.println("===<<>>>===");
 
