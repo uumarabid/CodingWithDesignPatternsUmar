@@ -20,7 +20,7 @@ public class NewMain {
         Car car1 = new Car(new AggressiveDriveStrategy(),"Umar");
         Car car2 = new Car(new DefensiveDriveStrategy(),"Butt");
 
-        Track track1 = new Track(new SimpleLayoutStrategy());
+        Track track1 = new Track(new SimpleRace());
         Track track2 = new Track(new ComplexLayoutStrategy());
 
         track1.build();

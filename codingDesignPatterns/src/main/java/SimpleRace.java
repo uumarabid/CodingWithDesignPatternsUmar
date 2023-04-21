@@ -7,9 +7,12 @@
  *
  * @author star_
  */
-public class SimpleLayoutStrategy implements RaceStrategy {
-
-    public void build() {
-        System.out.println("Building a simple track layout.");
-    }
+public class SimpleRace {
+    private int numCircuits;
+    private int circuitLength;
+    private int winnerIndex;
+    private int[] circuitTimes; 
+    
+    
+    
 }
