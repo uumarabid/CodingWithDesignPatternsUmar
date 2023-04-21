@@ -129,7 +129,7 @@ public class Race implements RaceObserver {
         float maxDistance = 0;
         for (Car car : cars) {
             float distance = car.getDistance();
-            System.out.println(distance + ">>>>>>" + car.name);
+            System.out.println(distance + " >>>>>> " + car.name);
             if (distance > maxDistance) {
                 maxDistance = distance;
                 winner = car;
@@ -170,5 +170,9 @@ public class Race implements RaceObserver {
     
     public void getTrackDescription() {
          this.tracks.build();
+    }
+    
+    public void changeWinner(){
+        end();
     }
 }

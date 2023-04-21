@@ -32,7 +32,7 @@ public class Car {
         this.name = name;
         this.startTime = LocalTime.now();
     }
-
+    
     public void setDriveStrategy(IDriveStrategy driveStrategy) {
         this.driveStrategy = driveStrategy;
     }
@@ -73,7 +73,7 @@ public class Car {
     public void getDescription() {
         System.out.println("\nname: " + this.name 
                            + "\nSpeed: " + speed
-                           + "\nDistance: " + (getDistance()/1000000) + " miles"
+                           + "\nDistance: " + (getDistance()/10000000) + " miles"
                             + "\n=======\n");
     }
 }
