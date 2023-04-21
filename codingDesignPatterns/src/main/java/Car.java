@@ -32,7 +32,7 @@ public class Car {
         this.name = name;
         this.startTime = LocalTime.now();
     }
-
+    
     public void setDriveStrategy(IDriveStrategy driveStrategy) {
         this.driveStrategy = driveStrategy;
     }
