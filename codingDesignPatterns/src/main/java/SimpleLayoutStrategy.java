@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public class SimpleLayoutStrategy implements LayoutStrategy {
+public class SimpleLayoutStrategy implements RaceStrategy {
 
     public void build() {
         System.out.println("Building a simple track layout.");

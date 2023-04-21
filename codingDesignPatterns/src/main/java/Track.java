@@ -7,15 +7,15 @@
  *
  * @author star_
  */
-public class Track implements LayoutStrategy {
+public class Track implements RaceStrategy {
 
-    LayoutStrategy layoutStrategy;
+    RaceStrategy layoutStrategy;
 
-    public Track(LayoutStrategy layoutStrategy) {
+    public Track(RaceStrategy layoutStrategy) {
         this.layoutStrategy = layoutStrategy;
     }
 
-    public void setLayoutStrategy(LayoutStrategy layoutStrategy) {
+    public void setLayoutStrategy(RaceStrategy layoutStrategy) {
         this.layoutStrategy = layoutStrategy;
     }
 

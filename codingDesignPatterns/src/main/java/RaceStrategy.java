@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public interface LayoutStrategy {
+public interface RaceStrategy {
 
     public void build();
 
