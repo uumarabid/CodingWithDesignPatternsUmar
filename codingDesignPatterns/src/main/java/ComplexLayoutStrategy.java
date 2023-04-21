@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public class ComplexLayoutStrategy implements RaceStrategy {
+public class ComplexLayoutStrategy {
 
     public void build() {
         System.out.println("Building a complex track layout.");

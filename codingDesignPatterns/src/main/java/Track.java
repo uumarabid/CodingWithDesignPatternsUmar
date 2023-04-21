@@ -7,7 +7,7 @@
  *
  * @author star_
  */
-public class Track implements RaceStrategy {
+public class Track  {
 
     RaceStrategy layoutStrategy;
 

@@ -9,6 +9,6 @@
  */
 public interface RaceStrategy {
 
-    public void build();
+    public void race(Car car, RaceObserver observer);
 
 }
