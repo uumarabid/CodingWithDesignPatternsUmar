@@ -33,6 +33,10 @@ public class NewMain {
         // https://codegym.cc/groups/posts/scanner-nextint-method-in-java
         int numCars = scanner.nextInt();
         scanner.nextLine();
+        
+        System.out.println("Enter the number of circuits for the race:");
+        int numCircuits = scanner.nextInt();
+        scanner.nextLine();
 
         // Create cars and tracks using the Strategy pattern
 //        Car car1 = new Car(new AggressiveDriveStrategy(),"Umar");
