@@ -1,4 +1,8 @@
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 /*
@@ -33,10 +37,15 @@ public class NewMain {
         // https://codegym.cc/groups/posts/scanner-nextint-method-in-java
         int numCars = scanner.nextInt();
         scanner.nextLine();
-        
+
         System.out.println("Enter the number of circuits for the race:");
         int numCircuits = scanner.nextInt();
         scanner.nextLine();
+
+        List<Car> cars = new ArrayList<>();
+        //https://www.w3schools.com/java/java_hashmap.asp
+        // https://www.javatpoint.com/java-map#:~:text=A%20map%20contains%20values%20on,the%20basis%20of%20a%20key.
+        Map<Integer, Boolean> selectedCars = new HashMap<>();
 
         // Create cars and tracks using the Strategy pattern
 //        Car car1 = new Car(new AggressiveDriveStrategy(),"Umar");
