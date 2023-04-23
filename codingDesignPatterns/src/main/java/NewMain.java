@@ -1,8 +1,10 @@
+
+import java.util.Scanner;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-
 /**
  *
  * @author star_
@@ -23,6 +25,14 @@ public class NewMain {
             new CarSpecificationDetails("Mercedes-Benz", " coupe ", 190),
             new CarSpecificationDetails("BMW 8-Series", " coupe ", 190),
             new CarSpecificationDetails("Ferrari F40", " sports ", 210),};
+
+        System.out.println("Enter the number of cars racing:...");
+        //https://www.w3schools.com/java/java_user_input.asp
+        Scanner scanner = new Scanner(System.in); // Create a Scanner object
+
+        // https://codegym.cc/groups/posts/scanner-nextint-method-in-java
+        int numCars = scanner.nextInt();
+        scanner.nextLine();
 
         // Create cars and tracks using the Strategy pattern
 //        Car car1 = new Car(new AggressiveDriveStrategy(),"Umar");
