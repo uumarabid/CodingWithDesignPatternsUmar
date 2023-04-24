@@ -72,6 +72,15 @@ public class NewMain {
                 }
             }while(carIndex ==0);
             
+             // Get the details of the selected car
+            CarSpecificationDetails selectedCar = carDetails[carIndex - 1];
+
+            // Mark the selected car as taken , true
+            selectedCars.put(carIndex - 1, true);
+            
+            // creates a new car and add to the cars list
+            cars.add(new Car(driverName + "'s " + selectedCar.getName() + " " + selectedCar.getType(), selectedCar.getSpeed()));
+            
            
         }
 
