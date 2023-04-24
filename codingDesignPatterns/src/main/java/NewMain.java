@@ -23,7 +23,7 @@ public class NewMain {
         System.out.println("\n-------Hello and welcome to Wacky car racer-----------\n");
 
         // Define an array of cars with their details
-        CarSpecificationDetails[] carDatails = new CarSpecificationDetails[]{
+        CarSpecificationDetails[] carDetails = new CarSpecificationDetails[]{
             new CarSpecificationDetails("Audi R8", " coupe ", 200),
             new CarSpecificationDetails("Porsche 911", " hatchback ", 180),
             new CarSpecificationDetails("Mercedes-Benz", " coupe ", 190),
@@ -52,10 +52,10 @@ public class NewMain {
             String driverName = scanner.nextLine();
 
             // Display the list of cars to choose from
-            for (int j = 0; j < carDatails.length; j++) {
+            for (int j = 0; j < carDetails.length; j++) {
                 if (!selectedCars.containsKey(j)) {
-                    System.out.printf("%d. %s (%s) - %d mph\n", j + 1, carDatails[j].getName(),
-                            carDatails[j].getType(), carDatails[j].getSpeed());
+                    System.out.printf("%d. %s (%s) - %d mph\n", j + 1, carDetails[j].getName(),
+                            carDetails[j].getType(), carDetails[j].getSpeed());
                 }
             }
 
@@ -72,7 +72,7 @@ public class NewMain {
                 }
             }while(carIndex ==0);
             
-        
+           
         }
 
         // Create cars and tracks using the Strategy pattern
