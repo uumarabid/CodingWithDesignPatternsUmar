@@ -102,10 +102,10 @@ public class NewMain {
         }
 
 //        race.update(race);
-        race.raceEnding();
-        race.raceEnded();
+//        race.raceEnding();
+//        race.raceEnded();
 //        race.endRace();
-        race.end();
+//        race.end();
         try {
             // Wait for 3 seconds
             Thread.sleep(2000);
