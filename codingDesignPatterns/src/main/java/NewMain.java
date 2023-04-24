@@ -46,6 +46,20 @@ public class NewMain {
         //https://www.w3schools.com/java/java_hashmap.asp
         // https://www.javatpoint.com/java-map#:~:text=A%20map%20contains%20values%20on,the%20basis%20of%20a%20key.
         Map<Integer, Boolean> selectedCars = new HashMap<>();
+        for(int i = 1; i<= numCars; i++){
+            System.out.printf("Enter the name of the driver %d:\n" , i);
+            
+            String driverName = scanner.nextLine();
+            
+            // Display the list of cars to choose from
+            for (int j = 0; j < carDatails.length; j++){
+                if(!selectedCars.containsKey(j)){
+                    System.out.printf("%d. %s (%s) - %d mph\n", j + 1, carDatails[j].getName(),
+                            carDatails[j].getType(), carDatails[j].getSpeed());
+                }
+            }
+            
+        }
 
         // Create cars and tracks using the Strategy pattern
 //        Car car1 = new Car(new AggressiveDriveStrategy(),"Umar");
