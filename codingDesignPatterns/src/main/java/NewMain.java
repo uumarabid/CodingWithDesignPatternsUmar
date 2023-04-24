@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -80,68 +81,30 @@ public class NewMain {
 
             // creates a new car and add to the cars list
             cars.add(new Car(driverName + "'s " + selectedCar.getName() + " " + selectedCar.getType(), selectedCar.getSpeed()));
-
-            RaceStrategy raceStrategy = new SimpleRace(numCircuits, 1000);
-            RaceObserver raceObserver = new RaceObserver() {
-                @Override
-                public void onCircuitCompleted(Car car, int circuitTime) {
-                    System.out.printf("%s completed a circuit in %d ms\n", car.getName(), circuitTime);
-                }
-            };
-
-            for (Car car : cars) {
-                raceStrategy.race(car, raceObserver);
-            }
-
-            int[] circuitTimes = ((SimpleRace) raceStrategy).getCircuitTimes();
-            int winnerIndex = 0;
-            int winnerTime = circuitTimes[0];
-            for (i = 1; i < circuitTimes.length; i++) {
-                if (circuitTimes[i] < winnerTime) {
-                    winnerIndex = i;
-                    winnerTime = circuitTimes[i];
-                }
-            }
-
-            System.out.printf("%s is the winner\n", cars.get(winnerIndex).getName());
-
         }
 
-        // Create cars and tracks using the Strategy pattern
-//        Car car1 = new Car(new AggressiveDriveStrategy(),"Umar");
-//        Car car2 = new Car(new DefensiveDriveStrategy(),"Butt");
-//
-//        Track track1 = new Track(new SimpleRace());
-//        Track track2 = new Track(new ComplexLayoutStrategy());
-//
-//        track1.build();
-//        System.out.println("===<<>>>===");
-//
-//        // Create race observers using the Observer pattern
-//        Race race = new Race(3);
-//        race.addCar(car1);
-//        race.addCar(car2);
-//        race.setTracks(track2);
-//
-////        race.startRace();
-//        race.raceStarted();
-//        
-//        race.getTrackDescription();
-//
-//        car1.getDescription();
-//        car2.getDescription();
-//
-//        while (!race.isOver()) {
-//            race.update(race);
-//        }
-//
-//        race.raceEnding();
-//        race.raceEnded();
-////        race.endRace();
-//
-//        Car winner = race.getWinner();
-//        System.out.println("The winner is " + winner.getName() + "!");
-//        System.out.println("win the race");
-    }
+        RaceStrategy raceStrategy = new SimpleRace(numCircuits, 1000);
+        RaceObserver raceObserver = new RaceObserver() {
+            @Override
+            public void onCircuitCompleted(Car car, int circuitTime) {
+                System.out.printf("%s completed a circuit in %d ms\n", car.getName(), circuitTime);
+            }
+        };
 
+        for (Car car : cars) {
+            raceStrategy.race(car, raceObserver);
+        }
+
+        int[] circuitTimes = ((SimpleRace) raceStrategy).getCircuitTimes();
+        int winnerIndex = 0;
+        int winnerTime = circuitTimes[0];
+        for (int i = 1; i < circuitTimes.length; i++) {
+            if (circuitTimes[i] < winnerTime) {
+                winnerIndex = i;
+                winnerTime = circuitTimes[i];
+            }
+        }
+
+        System.out.printf("%s is the winner\n", cars.get(winnerIndex).getName());
+    }
 }
