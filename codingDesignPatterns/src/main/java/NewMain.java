@@ -89,6 +89,22 @@ public class NewMain {
                 }
             };
 
+            for (Car car : cars) {
+                raceStrategy.race(car, raceObserver);
+            }
+
+            int[] circuitTimes = ((SimpleRace) raceStrategy).getCircuitTimes();
+            int winnerIndex = 0;
+            int winnerTime = circuitTimes[0];
+            for (i = 1; i < circuitTimes.length; i++) {
+                if (circuitTimes[i] < winnerTime) {
+                    winnerIndex = i;
+                    winnerTime = circuitTimes[i];
+                }
+            }
+
+            System.out.printf("%s is the winner\n", cars.get(winnerIndex).getName());
+
         }
 
         // Create cars and tracks using the Strategy pattern

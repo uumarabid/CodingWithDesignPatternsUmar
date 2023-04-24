@@ -20,7 +20,7 @@ public class Track  {
     }
 
     //  building track to a LayoutStrategy object
-    public void build() {
-        layoutStrategy.build();
-    }
+//    public void build() {
+//        layoutStrategy.build();
+//    }
 }
