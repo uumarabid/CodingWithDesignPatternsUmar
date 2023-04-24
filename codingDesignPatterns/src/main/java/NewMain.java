@@ -70,18 +70,25 @@ public class NewMain {
                     System.out.println("This car is already taken. Please select a different one.");
                     carIndex = 0;
                 }
-            }while(carIndex ==0);
-            
-             // Get the details of the selected car
+            } while (carIndex == 0);
+
+            // Get the details of the selected car
             CarSpecificationDetails selectedCar = carDetails[carIndex - 1];
 
             // Mark the selected car as taken , true
             selectedCars.put(carIndex - 1, true);
-            
+
             // creates a new car and add to the cars list
             cars.add(new Car(driverName + "'s " + selectedCar.getName() + " " + selectedCar.getType(), selectedCar.getSpeed()));
-            
-           
+
+            RaceStrategy raceStrategy = new SimpleRace(numCircuits, 1000);
+            RaceObserver raceObserver = new RaceObserver() {
+                @Override
+                public void onCircuitCompleted(Car car, int circuitTime) {
+                    System.out.printf("%s completed a circuit in %d ms\n", car.getName(), circuitTime);
+                }
+            };
+
         }
 
         // Create cars and tracks using the Strategy pattern
