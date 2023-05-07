@@ -4,11 +4,11 @@
 
 ## Game 1
 
-- Game 1 can be accesed from the `main` branch 
--  https://github.com/uumarabid/CodingWithDesignPatternsUmar.git
+- Game 1 can be accesed from the Game1 folder/directory 
+- To run the game 1, navigate to the `main` branch of Game1 folder
 
 
 ## Game 2
 
-- Game 2 can be accesed from the `game-improvements` branch
-- https://github.com/uumarabid/CodingWithDesignPatternsUmar/tree/Game-improvents
+- Game 2 can be accesed from the Game folder/directory
+- To run the game 1, navigate to the `main` branch of Game2 folder
