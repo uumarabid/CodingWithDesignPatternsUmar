@@ -39,7 +39,7 @@ public class NewMain {
         int numCars = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Enter the number of circuits for the race:");
+        System.out.println("Enter the number of laps for the race:");
         int numCircuits = scanner.nextInt();
         scanner.nextLine();
 
