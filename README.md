@@ -11,4 +11,9 @@
 ## Game 2
 
 - Game 2 can be accesed from the Game folder/directory
-- To run the game 1, navigate to the `main` branch of Game2 folder
+- To run the game 2, navigate to the `main` branch of Game2 folder
+
+
+## Notes
+
+- The game-improvements branch in Game 1 folder reflects the git commits for Game 2 development
