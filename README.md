@@ -16,4 +16,4 @@
 
 ## Notes
 
-- The game-improvements branch in Game 1 folder reflects the git commits for Game 2 development
+- The `game-improvements` branch in Game 1 folder reflects the git commits for Game 2 development
